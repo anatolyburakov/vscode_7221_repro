@@ -1,0 +1,40 @@
+{
+        "version": "2.0.0",
+        "tasks": [
+                {
+                        "label": "Clean",
+                        "type": "shell",
+                        "command": "rm -rf ${workspaceRoot}/../build/",
+                        "group": "none",
+                        "problemMatcher": []
+                },
+                {
+                        "label": "Configure",
+                        "type": "shell",
+                        "command": "meson ${workspaceRoot}/../build/",
+                        "group": "none",
+                        "problemMatcher": []
+                },
+                {
+                        "label": "Build",
+                        "type": "shell",
+                        "command": "ninja -C ${workspaceRoot}/../build/",
+                        "group": {
+                                "kind": "build",
+                                "isDefault": true
+                        },
+                        "problemMatcher": {
+                                "base": "$gcc",
+                                "fileLocation": [
+                                        "relative",
+                                        "${workspaceFolder}/../build/"
+                                ]
+                        },
+                        "dependsOrder": "sequence",
+                        "dependsOn": [
+                                "Clean",
+                                "Configure"
+                        ]
+                }
+        ]
+}

@@ -1,0 +1,17 @@
+{
+        "configurations": [
+                {
+                        "name": "Test",
+                        "compileCommands": "${workspaceFolder}/../build/compile_commands.json",
+                        "includePath": [
+                                "${workspaceFolder}/../build/",
+                                "${workspaceFolder}/**"
+                        ],
+                        "compilerPath": "/usr/bin/gcc",
+                        "cStandard": "c99",
+                        "cppStandard": "c++17",
+                        "intelliSenseMode": "${default}"
+                }
+        ],
+        "version": 4
+}
